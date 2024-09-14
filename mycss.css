@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+
+.annotator-main-container{
+    min-width: 400px;
+    overflow-y: auto;
+    /* border: 1px solid blue; */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.annotator-main-container::-webkit-scrollbar {
+    display: none;
+}
+
+.annotation{
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.annotation-note{
+  border: 1px solid lightgrey;
+  background-color: lightyellow;
+  margin-top: 5px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}

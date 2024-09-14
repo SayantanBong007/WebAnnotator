@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Web Annotator</title>
+  <!-- <style>
+    
+  </style> -->
+  <link rel="stylesheet" href="mycss.css">
+  <!-- Add this link in the <head> section of your HTML file -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="annotator-main-container border border-1 border-black p-5">
+    <h3 class="text-3xl">Web Annotator</h3>
+    <div class="grid grid-cols-3 gap-5 my-2">
+      <div class="color-palette">
+        <div class="color-swatch h-full border border-2 border-black rounded cursor-pointer" id="selectedHighlighterColor" style="background-color: yellow;"></div>
+      </div>
+      <div class="color-palette col-span-2 flex flex-wrap gap-2" id="color-palette">
+        <div class="color-swatch w-7 h-7 border border-2 border-black rounded cursor-pointer" style="background-color: yellow;" data-color="yellow"></div>
+        <div class="color-swatch w-7 h-7 border border-2 border-black rounded cursor-pointer" style="background-color: cyan;" data-color="cyan"></div>
+        <div class="color-swatch w-7 h-7 border border-2 border-black rounded cursor-pointer" style="background-color: magenta;" data-color="magenta"></div>
+        <div class="color-swatch w-7 h-7 border border-2 border-black rounded cursor-pointer" style="background-color: lime;" data-color="lime"></div>
+        <div class="color-swatch w-7 h-7 border border-2 border-black rounded cursor-pointer" style="background-color: coral;" data-color="coral"></div>
+        <div class="color-swatch w-7 h-7 border border-2 border-black rounded cursor-pointer" style="background-color: turquoise;" data-color="turquoise"></div>
+        <div class="color-swatch w-7 h-7 border border-2 border-black rounded cursor-pointer" style="background-color: skyblue;" data-color="skyblue"></div>
+      </div>
+    </div>
+    <div class="flex gap-2">
+      <button class="text-sm bg-gray-200 border border-1 border-gray-400 rounded p-2" id="highlightToggle">Toggle Highlighter</button>
+      <button class="text-sm bg-gray-200 border border-1 border-gray-400 rounded p-2 flex items-center justify-center gap-2" id="exportPDF"><i class="fa fa-download fa-lg"></i><span>Download</span></button>
+    </div>
+    <div class="my-3">
+      <input class="p-2 border border-1 border-gray-500 rounded w-full" type="text" id="search-input" placeholder="Search annotations...">
+    </div>
+    <div id="annotations-container" class="flex flex-col gap-3"></div>
+  </div>
+
+  <script src="popup.js"></script>
+  <script src="html2pdf.js"></script>
+</body>
+
+</html>
